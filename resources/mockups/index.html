@@ -14,8 +14,8 @@
                         <menu class="menu">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 512 512"
                                 fill="currentColor"
+                                viewBox="0 0 512 512"
                             >
                                 <line
                                     x1="88"
@@ -24,7 +24,7 @@
                                     y2="152"
                                     style="
                                         fill: none;
-                                        stroke: #000;
+                                        stroke: #fff;
                                         stroke-linecap: round;
                                         stroke-miterlimit: 10;
                                         stroke-width: 48px;
@@ -37,7 +37,7 @@
                                     y2="256"
                                     style="
                                         fill: none;
-                                        stroke: #000;
+                                        stroke: #fff;
                                         stroke-linecap: round;
                                         stroke-miterlimit: 10;
                                         stroke-width: 48px;
@@ -50,7 +50,7 @@
                                     y2="360"
                                     style="
                                         fill: none;
-                                        stroke: #000;
+                                        stroke: #fff;
                                         stroke-linecap: round;
                                         stroke-miterlimit: 10;
                                         stroke-width: 48px;
@@ -61,7 +61,7 @@
                         <h1 class="label">College</h1>
                     </div>
                 </li>
-                <li class="list">
+                <li class="list active">
                     <a href="#" class="link">
                         <span class="icon"></span>
                         <span class="label">Dashboard</span>
@@ -109,5 +109,44 @@
                 </li>
             </ul>
         </nav>
+        <main class="content">
+            <header class="header">
+                <h1 class="title">Dashboard</h1>
+                <div class="profile">
+                    <img src="" alt="" />
+                    <span class="label">Cavin Hartono</span>
+                </div>
+                <ul class="setting">
+                    <li class="list">
+                        <a href="#" class="link">
+                            <span class="icon"></span>
+                            <span class="label">Pengaturan</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#" class="link">
+                            <span class="icon"></span>
+                            <span class="label">Keluar</span>
+                        </a>
+                    </li>
+                </ul>
+            </header>
+        </main>
+        <script>
+            const links = document.querySelectorAll(".nav .list");
+
+            document.querySelector(".menu").addEventListener("click", () => {
+                document.querySelector("body").classList.toggle("active");
+                document.querySelector(".navbar").classList.toggle("active");
+            });
+
+            function isActiveLink() {
+                links.forEach((link) => link.classList.remove("active"));
+                this.classList.add("active");
+            }
+
+            for (let i = 1; i <= links.length; i++)
+                links[i].addEventListener("click", isActiveLink);
+        </script>
     </body>
 </html>
