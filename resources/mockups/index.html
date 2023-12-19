@@ -169,12 +169,31 @@
                 </li>
             </ul>
         </nav>
-        <main class="content">
+        <section class="content">
             <header class="header">
                 <h1 class="title">Dashboard</h1>
                 <div class="profile">
-                    <img src="" alt="" />
-                    <span class="label">Cavin Hartono</span>
+                    <span class="label">
+                        Cavin Hartono
+                        <span class="icon">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="currentColor"
+                                viewBox="0 0 512 512"
+                            >
+                                <polyline
+                                    points="112 184 256 328 400 184"
+                                    style="
+                                        fill: none;
+                                        stroke: #000;
+                                        stroke-linecap: round;
+                                        stroke-linejoin: round;
+                                        stroke-width: 48px;
+                                    "
+                                />
+                            </svg>
+                        </span>
+                    </span>
                 </div>
                 <ul class="setting">
                     <li class="list">
@@ -191,27 +210,31 @@
                     </li>
                 </ul>
             </header>
-        </main>
-        <script>
-            const links = document.querySelectorAll(".nav .list");
-
-            document.querySelector(".menu").addEventListener("click", () => {
-                document.querySelector("body").classList.toggle("active");
-                document.querySelector(".navbar").classList.toggle("active");
-            });
-
-            document.querySelector(".profile").addEventListener("click", () => {
-                document.querySelector(".setting").classList.toggle("active");
-            });
-
-            function isActiveLink() {
-                links.forEach((link) => link.classList.remove("active"));
-                this.classList.add("active");
-            }
-
-            for (let i = 1; i <= links.length; i++) {
-                links[i].addEventListener("click", isActiveLink);
-            }
-        </script>
+            <main class="component">
+                <div class="content">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </section>
+        <script src="script.js"></script>
     </body>
 </html>
