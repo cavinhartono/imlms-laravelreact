@@ -1,3 +1,5 @@
+import List from "@/Items/List";
+
 export default function Collapse({ icon, label, links }) {
     return (
         <li>
